@@ -6,12 +6,15 @@
 
 composer安装：
 
+```
 composer
+```
 
 手动安装：
 
 githup下载后，放入vendor目录，去yiisoft\extensions.php下方增加：
 
+```
 'zyblog/dwz' =>  array (
       'name' => 'zyblog/dwz',
       'version' => '1.0',
@@ -20,6 +23,7 @@ githup下载后，放入vendor目录，去yiisoft\extensions.php下方增加：
               '@zyblog/dwz' => $vendorDir . '/zyblog/dwz-jui',
           ),
   ),
+```
 
 ##集成：
 
