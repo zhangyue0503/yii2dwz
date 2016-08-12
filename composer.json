@@ -1,0 +1,28 @@
+{
+	"name": "zyblog/dwz",
+	"description": "dwz后台模板+kindeditor部件",
+	"keywords": ["yii2dwz", "dwz.js", "dwz kindeditor", "kindeditor"],
+	"homepage": "https://github.com/zhangyue0503/yii2dwz",
+	"type": "yii2-extension",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Zhang Yue",
+			"email": "zhangyue0503@hotmail.com",
+			"homepage": "http://www.zyblog.net/",
+			"role": "Creator"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/zhangyue0503/yii2dwz/issues",
+		"source": "https://github.com/zhangyue0503/yii2dwz"
+	},
+	"require": {
+		"yiisoft/yii2": "*"
+	},
+	"autoload": {
+		"psr-4": {
+			"zyblog\\dwz\\": ""
+		}
+	}
+}
