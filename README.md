@@ -25,6 +25,22 @@ githup下载后，放入vendor目录，去yiisoft\extensions.php下方增加：
   ),
 ```
 
+配置文件中：
+
+```php
+'components' => [
+    'view' => [
+         'theme' => [
+             'pathMap' => [
+                '@app/views' => '@vendor/zyblog/dwz-jui/example-views'
+             ],
+         ],
+    ],
+],
+```
+
+或者直接把example-views里的内容拷贝到项目中替换原文件
+
 ##集成：
 
 **dwz框架**
