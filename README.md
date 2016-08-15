@@ -63,7 +63,7 @@ http://www.yiiframework.com/extension/dwzinterface/
 仅添加了部分widget，最主要的是tab和pager分页这两个，方便大家使用，其他的效果自己看dwz的demo添加widget或者手写都行，除了这两个常用而且比较麻烦外，其他的我基本上都自己写，好控制一些~
 
 
-##完整项目带测试页面的请移步 Yii2-dwz-bjui-example，两套后端模板都套好的
+##完整项目带测试页面的请移步 Yii2-zyblog-example
 
 进行中....
 
