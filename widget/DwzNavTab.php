@@ -138,7 +138,7 @@ class DwzNavTab extends Widget
 
 
     //tabs测试数据打印出来的内容
-    //以yii2-admin返回的menu数据为基础另外增加了一些属性
+    //以“mdmsoft\yii2-admin”返回的menu数据为基础另外增加了一些属性
     //external,fresh,target,rel,treeFolder,treeCheck
     //             Array
 // (

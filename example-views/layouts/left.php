@@ -11,8 +11,8 @@
 
             <?= \zyblog\dwz\widget\DwzNavTab::widget(["tabs" => [['label' => 'DwzNavTab测试1', 'url' => '#', 'items' => [
                 ['label' => '主页', 'url' => ['http://www.zyblog.net']],
-                ['label' => '页面1', 'url' => ['http://www.jianshenchao.com']],
-                ['label' => '页面2', 'url' => ['http://www.zyblog.net']]
+                ['label' => 'kindeditor', 'url' => [urldecode(\yii\helpers\Url::toRoute('example/kind-editor'))]],
+                ['label' => 'panel', 'url' => [urldecode(\yii\helpers\Url::toRoute('example/panel'))]]
             ]
             ]]]); ?>
 
