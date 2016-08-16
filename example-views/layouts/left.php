@@ -12,7 +12,8 @@
             <?= \zyblog\dwz\widget\DwzNavTab::widget(["tabs" => [['label' => 'DwzNavTab测试1', 'url' => '#', 'items' => [
                 ['label' => '主页', 'url' => ['http://www.zyblog.net']],
                 ['label' => 'kindeditor', 'url' => [urldecode(\yii\helpers\Url::toRoute('example/kind-editor'))]],
-                ['label' => 'panel', 'url' => [urldecode(\yii\helpers\Url::toRoute('example/panel'))]]
+                ['label' => 'panel', 'url' => [urldecode(\yii\helpers\Url::toRoute('example/panel'))]],
+                ['label' => 'pager', 'url' => [urldecode(\yii\helpers\Url::toRoute('example/pager'))]]
             ]
             ]]]); ?>
 
