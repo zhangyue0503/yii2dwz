@@ -5,6 +5,7 @@
 	"homepage": "https://github.com/zhangyue0503/yii2dwz",
 	"type": "yii2-extension",
 	"license": "MIT",
+	"minimum-stability" : "stable",
 	"authors": [
 		{
 			"name": "Zhang Yue",
