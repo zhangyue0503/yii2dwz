@@ -20,7 +20,7 @@ githup下载后，在vendor目录下创建zyblog目录，代码放进去，去yi
       'version' => '1.0',
       'alias' =>
           array (
-              '@zyblog/dwz' => $vendorDir . '/zyblog/dwz-jui',
+              '@zyblog/dwz' => $vendorDir . '/zyblog/yii2-dwz',
           ),
   ),
 ```
@@ -33,7 +33,7 @@ githup下载后，在vendor目录下创建zyblog目录，代码放进去，去yi
     'view' => [
          'theme' => [
              'pathMap' => [
-                '@app/views' => '@vendor/zyblog/dwz-jui/example-views'
+                '@app/views' => '@vendor/zyblog/yii2-dwz/example-views'
              ],
          ],
     ],
