@@ -9,7 +9,7 @@ zyblog\dwz\assets\DwzJuiLtIE9Asset::register($this);
 //zyblog\dwz\assets\DwzJuiGteIE9Asset::register($this);
 
 zyblog\dwz\assets\DwzJuiAsset::register($this);
-$dwzAssetsUrl = $this->getAssetManager()->getPublishedUrl('@vendor/zyblog/dwz-jui/dwz_jui-master');
+$dwzAssetsUrl = $this->getAssetManager()->getPublishedUrl('@vendor/zyblog/yii2-dwz/dwz_jui-master');
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

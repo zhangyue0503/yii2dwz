@@ -7,7 +7,7 @@
  * Time: 22:00
  */
 /* @var $this \yii\web\View */
-$assetsUrl = $this->getAssetManager()->getPublishedUrl('@vendor/zyblog/dwz-jui/dwz_jui-master');
+$assetsUrl = $this->getAssetManager()->getPublishedUrl('@vendor/zyblog/yii2-dwz/dwz_jui-master');
 ?>
 <textarea name="<?= $ke_params['name']?>" id="<?= $ke_params['name']?>" class="kindeditor"></textarea>
 <script type="text/javascript">
