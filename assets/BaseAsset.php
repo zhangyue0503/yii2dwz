@@ -10,7 +10,7 @@ use yii\web\AssetBundle;
  */
 class BaseAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/zyblog/dwz-jui/dwz_jui-master';
+    public $sourcePath = '@vendor/zyblog/yii2-dwz/dwz_jui-master';
     public $cssOptions = ['media'=>'screen'];
     public $publishOptions = [
         'except'=>[
