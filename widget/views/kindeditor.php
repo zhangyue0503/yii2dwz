@@ -26,6 +26,7 @@ $assetsUrl = $this->getAssetManager()->getPublishedUrl('@vendor/zyblog/yii2-dwz/
             width:"<?= $ke_params['width']?>",
             minWidth:"<?= $ke_params['width']?>",
             height:"<?= $ke_params['height']?>",
+            urlType : "domain",   //显示完整url
             afterChange : function(){this.sync();},
             <?php if(is_array($ke_params['items']) && count($ke_params['items']) > 0){?>
             items:<?= json_encode($ke_params['items'])?>
