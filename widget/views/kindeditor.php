@@ -9,7 +9,7 @@
 /* @var $this \yii\web\View */
 $assetsUrl = $this->getAssetManager()->getPublishedUrl('@vendor/zyblog/yii2-dwz/dwz_jui-master');
 ?>
-<textarea name="<?= $ke_params['name']?>" id="<?= $ke_params['name']?>" class="kindeditor"></textarea>
+<textarea name="<?= $ke_params['name']?>" id="<?= $ke_params['name']?>" class="kindeditor"><?= $ke_params['content']?></textarea>
 <script type="text/javascript">
     var kindeditorpath = "<?= $assetsUrl?>/kindeditor/";
     var kindeditorjspath = "<?= $assetsUrl?>/kindeditor/kindeditor-min.js";

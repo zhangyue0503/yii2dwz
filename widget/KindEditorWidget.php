@@ -26,6 +26,7 @@ class KindEditorWidget extends Widget
     public $height;
     public $items;       //items设置，请参照kindeditor文档，例：["source","|","undo"]
     public $name;
+    public $content;
 
     public function init()
     {
@@ -38,6 +39,7 @@ class KindEditorWidget extends Widget
         $this->ke_params['height'] = $this->height===null || !$this->height ? "200px" : $this->height;
         $this->ke_params['items'] = $this->items===null || !is_array($this->items) ? [] : $this->items;
         $this->ke_params['name'] = $this->name===null || !($this->name) ? "content" : $this->name;
+        $this->ke_params['content'] = $this->content===null || !($this->name) ? "" : $this->content;
     }
 
     public function run()
