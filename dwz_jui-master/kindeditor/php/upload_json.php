@@ -14,12 +14,13 @@ $php_url = dirname($_SERVER['PHP_SELF']) . '/';
 
 //将上传目录传过来 zhangyue 2016.8.6
 $uploadPath = $_GET['uploadPath'];
+$urlPath = $_GET['urlPath'];
 
 //文件保存目录路径
 //加到4个../，定位到web下 zhangyue 2016.8.6
-$save_path = $php_path . '../../../../'.$uploadPath.'/';
+$save_path = $php_path .$uploadPath.'/';
 //文件保存目录URL
-$save_url = $php_url . '../../../../'.$uploadPath.'/';
+$save_url = $urlPath.'/';
 //定义允许上传的文件扩展名
 $ext_arr = array(
 	'image' => array('gif', 'jpg', 'jpeg', 'png', 'bmp'),

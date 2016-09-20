@@ -62,6 +62,11 @@ http://www.yiiframework.com/extension/dwzinterface/
 
 仅添加了部分widget，最主要的是pager分页和navtab菜单，方便大家使用，其他的效果自己看dwz的demo添加widget或者手写都行，除了这两个常用而且比较麻烦外，其他的我基本上都自己写，好控制一些~
 
+#kindeditor上传文件
+
+默认用的原生的上传文件，代码复制到项目后会在web目录下的assets中，比如：web/assets/b9297cd7/kindeditor/php/upload_json.php，上传的目录也会相对这个位置，因此，ke的widget中默认uploadPath加了四了../定位到web目录
+
+上传功能建议自己写，直接修改widget的views中相关的上传配置，请参考kindeditor的相关文档
 
 ##完整项目带测试页面的请移步 Yii2-zyblog-example
 

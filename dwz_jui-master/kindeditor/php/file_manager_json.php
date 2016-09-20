@@ -14,13 +14,14 @@ $php_url = dirname($_SERVER['PHP_SELF']) . '/';
 
 //将上传目录传过来 zhangyue 2016.8.6
 $uploadPath = $_GET['uploadPath'];
+$urlPath = $_GET['urlPath'];
 
 
 //根目录路径，可以指定绝对路径，比如 /var/www/attached/
 //加到4个../，定位到web下 zhangyue 2016.8.6
-$root_path = $php_path . '../../../../'.$uploadPath.'/';
+$root_path = $php_path .$uploadPath.'/';
 //根目录URL，可以指定绝对路径，比如 http://www.yoursite.com/attached/
-$root_url = $php_url . '../../../../'.$uploadPath.'/';
+$root_url = $urlPath.'/';
 //图片扩展名
 $ext_arr = array('gif', 'jpg', 'jpeg', 'png', 'bmp');
 

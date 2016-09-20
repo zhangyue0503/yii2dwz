@@ -19,8 +19,8 @@ $assetsUrl = $this->getAssetManager()->getPublishedUrl('@vendor/zyblog/yii2-dwz/
         ke<?= $ke_params['name']?> = KindEditor.create('#<?= $ke_params['name']?>',{
             //zhangyue 2016.8.16
             //上传这两个属性直接get资源文件使用kindeditor默认的文件上传示例进行上传，建议自己写一套后修改此处路径
-            uploadJson: '<?= $assetsUrl?>/kindeditor/php/upload_json.php?uploadPath=<?= $ke_params['uploadPath']?>',
-            fileManagerJson: '<?= $assetsUrl?>/kindeditor/php/file_manager_json.php?uploadPath=<?= $ke_params['uploadPath']?>',
+            uploadJson: '<?= $assetsUrl?>/kindeditor/php/upload_json.php?uploadPath=<?= $ke_params['uploadPath']?>&urlPath=<?= $ke_params['urlPath']?>',
+            fileManagerJson: '<?= $assetsUrl?>/kindeditor/php/file_manager_json.php?uploadPath=<?= $ke_params['uploadPath']?>&urlPath=<?= $ke_params['urlPath']?>',
             allowFileManager: <?= $ke_params['allowFileManager']?>,
             resizeType:<?= $ke_params['resizeType']?>,
             width:"<?= $ke_params['width']?>",
