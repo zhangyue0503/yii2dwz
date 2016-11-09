@@ -4,7 +4,6 @@
 
 $this->title = 'My Yii Application';
 ?>
-
 <div id="navTab" class="tabsPage">
     <div class="tabsPageHeader">
         <div class="tabsPageHeaderContent"><!-- 显示左右控制时添加 class="tabsPageHeaderMargin" -->

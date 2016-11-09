@@ -110,7 +110,7 @@ class DwzNavTab extends Widget
                             $tfBox = "";
                         }
 
-                        $html.='<div class="accordionHeader"><h2><span>Folder</span>'.$tab['label'].'</h2></div><div class="accordionContent"><ul class="tree '.$tfBox.$ckBox.'">';
+                        $html.='<div class="accordion" fillSpace="sidebar"><div class="accordionHeader"><h2><span>Folder</span>'.$tab['label'].'</h2></div><div class="accordionContent"><ul class="tree '.$tfBox.$ckBox.'">';
                     }else{
                         if($url!=''){
                             $html.='<li><a href="'.$url.'" '.$target.' '.$fresh.'>'.$tab['label'].'</a><ul>';
@@ -123,7 +123,7 @@ class DwzNavTab extends Widget
                     $html .= $this->__readerNavTabs($tab['items'],++$reLevel);
                     //分组目录线束
                     if($level==0){
-                        $html.='</ul></div>';
+                        $html.='</ul></div></div>';
                     }else{
                         $html.='</ul></li>';
                     }
