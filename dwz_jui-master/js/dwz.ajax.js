@@ -379,6 +379,9 @@ $.fn.extend({
 			var $form = $("#pagerForm", $p);
 			var url = $this.attr("href");
 
+			window.location=url+(url.indexOf('?')==-1?"?":"&")+$form.serialize();
+			return;
+
 			if ($form.size() == 0) {
 				window.location = url;
 				return;
