@@ -18,47 +18,47 @@ class DwzNavTab extends Widget
 {
     public $tabs = [
         ['label' => 'DwzNavTab测试1', 'url' => '#', 'items' => [
-                ['label' => '主页', 'url' => ['http://www.zyblog.net']],
-                ['label' => '页面1', 'url' => ['http://www.jianshenchao.com']],
-                ['label' => '页面2', 'url' => ['http://www.zyblog.net']]
-            ]
+            ['label' => '主页', 'url' => ['http://www.zyblog.net']],
+            ['label' => '页面1', 'url' => ['http://www.jianshenchao.com']],
+            ['label' => '页面2', 'url' => ['http://www.zyblog.net']]
+        ]
         ],
         ['label' => 'DwzNavTab测试2', 'url' => '#', 'items' => [
-                ['label' => '二级子分组1', 'url' => '#', 'items' => [
-                        ['label' => '子分组1页面1', 'url' => ['http://www.weibo.com']],
-                        ['label' => '子分组1页面2', 'url' => ['http://www.zyblog.net'],'external'=>true]
+            ['label' => '二级子分组1', 'url' => '#', 'items' => [
+                ['label' => '子分组1页面1', 'url' => ['http://www.weibo.com']],
+                ['label' => '子分组1页面2', 'url' => ['http://www.zyblog.net'],'external'=>true]
+            ]
+            ],
+            ['label' => '二级子分组2', 'url' => '#', 'items' => [
+                ['label' => '子分组2页面1', 'url' => ['http://www.jianshenchao.com'],'target'=>'_blank'],
+                ['label' => '子分组2页面2', 'url' => ['http://www.zyblog.net'],'fresh'=>false],
+                ['label' => '三级子分组1', 'url' => '#', 'items' => [
+                    ['label' => '子分组3页面1', 'url' => ['http://www.jianshenchao.com'],'rel'=>'jianshencaho'],
+                    ['label' => '四级子分组1', 'url' => '#', 'items' => [
+                        ['label' => '子分组4页面1', 'url' => ['http://www.jianshenchao.com'],'rel'=>'jianshencaho2'],
+                    ],
                     ]
                 ],
-                ['label' => '二级子分组2', 'url' => '#', 'items' => [
-                        ['label' => '子分组2页面1', 'url' => ['http://www.jianshenchao.com'],'target'=>'_blank'],
-                        ['label' => '子分组2页面2', 'url' => ['http://www.zyblog.net'],'fresh'=>false],
-                        ['label' => '三级子分组1', 'url' => '#', 'items' => [
-                                ['label' => '子分组3页面1', 'url' => ['http://www.jianshenchao.com'],'rel'=>'jianshencaho'],
-                                ['label' => '四级子分组1', 'url' => '#', 'items' => [
-                                        ['label' => '子分组4页面1', 'url' => ['http://www.jianshenchao.com'],'rel'=>'jianshencaho2'],
-                                    ],
-                                ]
-                            ],
-                        ]
-                    ],
-                ],
-            ]
+                ]
+            ],
+            ],
+        ]
         ],
         //treeCheck，默认为false，只有设置了ture才加上，treeFolder设为为false，不显示前面的小图标了，默认true，只有设置false的时候才不加上
         ['label' => 'DwzNavTab测试3', 'url' => '#','treeCheck'=>true,'treeFolder'=>false, 'items' => [
             ['label' => '二级子分组1', 'url' => '#', 'items' => [
-                    ['label' => '子分组1页面1', 'url' => ['http://www.weibo.com']],
-                    ['label' => '子分组1页面2', 'url' => ['http://www.zyblog.net'],'external'=>true]         //external iframe方式，默认为false，只有设置了ture才加上
-                ]
+                ['label' => '子分组1页面1', 'url' => ['http://www.weibo.com']],
+                ['label' => '子分组1页面2', 'url' => ['http://www.zyblog.net'],'external'=>true]         //external iframe方式，默认为false，只有设置了ture才加上
+            ]
             ],
             ['label' => '二级子分组2', 'url' => '#', 'items' => [
-                    ['label' => '子分组2页面1', 'url' => ['http://www.jianshenchao.com'],'target'=>'_blank'], //自定义target
-                    ['label' => '子分组2页面2', 'url' => ['http://www.zyblog.net'],'fresh'=>false],          //fresh ，true，只有设置了false才加上
-                    ['label' => '三级子分组1', 'url' => '#', 'items' => [
-                            ['label' => '子分组2页面1', 'url' => ['http://www.jianshenchao.com'],'rel'=>'jianshencaho'], //自定义rel，默认直接用url
-                        ],
-                    ]
+                ['label' => '子分组2页面1', 'url' => ['http://www.jianshenchao.com'],'target'=>'_blank'], //自定义target
+                ['label' => '子分组2页面2', 'url' => ['http://www.zyblog.net'],'fresh'=>false],          //fresh ，true，只有设置了false才加上
+                ['label' => '三级子分组1', 'url' => '#', 'items' => [
+                    ['label' => '子分组2页面1', 'url' => ['http://www.jianshenchao.com'],'rel'=>'jianshencaho'], //自定义rel，默认直接用url
                 ],
+                ]
+            ],
             ],
         ]
         ]
@@ -75,7 +75,7 @@ class DwzNavTab extends Widget
     }
 
     private function __readerNavTabs($tabs,$level=0){
-        $html = '';
+        if($level==0) $html = '<div class="accordion" fillSpace="sidebar">';
         if (is_array($tabs) && count($tabs) > 0) {
             foreach ($tabs as $tab) {
                 $reLevel = $level;
@@ -110,7 +110,7 @@ class DwzNavTab extends Widget
                             $tfBox = "";
                         }
 
-                        $html.='<div class="accordion" fillSpace="sidebar"><div class="accordionHeader"><h2><span>Folder</span>'.$tab['label'].'</h2></div><div class="accordionContent"><ul class="tree '.$tfBox.$ckBox.'">';
+                        $html.='<div class="accordionHeader"><h2><span>Folder</span>'.$tab['label'].'</h2></div><div class="accordionContent"><ul class="tree '.$tfBox.$ckBox.'">';
                     }else{
                         if($url!=''){
                             $html.='<li><a href="'.$url.'" '.$target.' '.$fresh.'>'.$tab['label'].'</a><ul>';
@@ -123,7 +123,7 @@ class DwzNavTab extends Widget
                     $html .= $this->__readerNavTabs($tab['items'],++$reLevel);
                     //分组目录线束
                     if($level==0){
-                        $html.='</ul></div></div>';
+                        $html.='</ul></div>';
                     }else{
                         $html.='</ul></li>';
                     }
@@ -133,6 +133,7 @@ class DwzNavTab extends Widget
                 }
             }
         }
+        if($level==0) $html .='</div>';
         return $html;
     }
 
